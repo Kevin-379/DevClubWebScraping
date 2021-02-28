@@ -19,10 +19,11 @@ except ValueError:  # Round number is not an integer
     exit()
 
 roundNum = sys.argv[1]
+PATH = "chromedriver.exe"  # Path to chromedriver.exe
 BASE_URL = f"https://codeforces.com/contest/{roundNum}"
 options = Options()
 options.add_argument('--headless')
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(options=options, executable_path=PATH)
 driver.set_window_size(1920, 2500)  # To capture entire problem
 numProblems = utils.getNumProblems(driver, BASE_URL)  # Get number of problems from contest page
 BASE_URL = BASE_URL+"/problem/"

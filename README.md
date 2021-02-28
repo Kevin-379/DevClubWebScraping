@@ -15,6 +15,7 @@ python3 ./Moodle/moodleLogin.py (Linux/Mac)
 Enter username and password. Password should be hidden.
 
 ## Codeforces
+Edit the PATH variable inside fetch_round.py and set it to chromedriver.exe  
 cd Codeforces  
 python fetch_round.py [round number] (Windows)  
 python3 fetch_round.py [round number] (Linux/Mac)
